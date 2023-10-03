@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+// naam "ActivityFirstBinding" wordt gevormd op basis van de naam xml-bestand (activity_first.xml)
 import com.example.androidactivity.databinding.ActivityFirstBinding
 
 class FirstActivity : AppCompatActivity() {
