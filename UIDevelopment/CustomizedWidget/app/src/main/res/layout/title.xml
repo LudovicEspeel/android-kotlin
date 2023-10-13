@@ -8,9 +8,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:background="@drawable/back_bg"
         android:text="Back"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        android:background="@drawable/back_bg" />
     <TextView
         android:id="@+id/titleText"
         android:layout_width="0dp"
