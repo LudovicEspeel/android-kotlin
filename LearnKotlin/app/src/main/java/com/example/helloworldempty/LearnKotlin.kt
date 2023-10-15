@@ -2,10 +2,12 @@ package com.example.helloworldempty
 
 import kotlin.math.max
 
+// dit project kan je niet uitvoeren in de emulator, klik gewoon op Run en het project (startende
+// van de main-functie) wordt uitgeveord in een terminal venster:
 fun main() {
-    var a: Int=10
-    a=a*10;
-    println("Hello Kotlin, a= "+a)
+    var a: Int = 10
+    a = a * 10;
+    println("Hello Kotlin, a= " + a)
 
     a = 37
     val b = 40
@@ -13,12 +15,12 @@ fun main() {
     println("larger number is " + value)
 
     val range = 0 until 10
-    for(i in range)
+    for (i in range)
         println(i)
 
-    val p=Person()
-    p.name="Jack"
-    p.age=19
+    val p = Person()
+    p.name = "Jack"
+    p.age = 19
     p.eat()
 
     val student = Student("a123", 5)
@@ -26,7 +28,7 @@ fun main() {
     student.eat()
     doStudy(student)
 
-    val s:Study=student2;
+    val s: Study = student2;
     println(student2)
     println(student)
     println(s)
@@ -52,7 +54,7 @@ fun main() {
 
 }
 
-fun largerNumber(num1: Int, num2:Int): Int {
+fun largerNumber(num1: Int, num2: Int): Int {
     return max(num1, num2)
 }
 
@@ -61,7 +63,7 @@ fun doStudy(study: Study?) {
     study?.doHomework()
 }
 
-fun getTextLength(text: String?) = text?.length?: 0
+fun getTextLength(text: String?) = text?.length ?: 0
 
 fun printParams(num: Int = 100, str: String) {
     println("num is $num , str is $str")

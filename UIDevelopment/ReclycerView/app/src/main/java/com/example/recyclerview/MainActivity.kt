@@ -1,29 +1,29 @@
+package com.example.recyclerview
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.recyclerview.R
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
-
     private val fruitList = ArrayList<Fruit>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initFruits()
-        //val layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
-        val layoutManager = LinearLayoutManager(this)
-        layoutManager.orientation = LinearLayoutManager.HORIZONTAL
-        val recyclerView = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.recyclerView)
+        //val layoutManager = LinearLayoutManager(this)
+        val layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        val recyclerView =
+            findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = layoutManager
         val adapter = FruitAdapter(fruitList)
         recyclerView.adapter = adapter
     }
 
     private fun initFruits() {
-        //repeat(2) {
+        repeat(2) {
             fruitList.add(Fruit(getRandomLengthString("Apple"), R.drawable.apple_pic))
             fruitList.add(Fruit(getRandomLengthString("Banana"), R.drawable.banana_pic))
             fruitList.add(Fruit(getRandomLengthString("Orange"), R.drawable.orange_pic))
@@ -34,18 +34,15 @@ class MainActivity : AppCompatActivity() {
             fruitList.add(Fruit(getRandomLengthString("Strawberry"), R.drawable.strawberry_pic))
             fruitList.add(Fruit(getRandomLengthString("Cherry"), R.drawable.cherry_pic))
             fruitList.add(Fruit(getRandomLengthString("Mango"), R.drawable.mango_pic))
-        //}
+        }
     }
 
     private fun getRandomLengthString(str: String): String {
-        return str
-        /*
         val n = (1..20).random()
         val builder = StringBuilder()
         repeat(n) {
             builder.append(str)
         }
         return builder.toString()
-         */
     }
 }
