@@ -1,5 +1,1 @@
-Overzicht codevoorbeelden Mobile apps:
-
-* Hoofdstuk 2: LearnKotlin
-* Hoofdstuk 3: Activity
-* Hoofdstuk 4: UIDevelopment
+Overzicht van enkele codevoorbeelden voor de cursus Mobile apps gebaseerd op het boek "The First Line of Code : Android Programming with Kotlin". Niet alle codevoorbeelden uit het boek staan in deze repository.

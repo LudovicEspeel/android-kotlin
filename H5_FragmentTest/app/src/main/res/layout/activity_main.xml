@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- statisch laden fragment -->
+    <fragment
+        android:id="@+id/leftFrag"
+        android:name="com.example.fragmenttest.LeftFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+    <!--<fragment
+        android:id="@+id/rightFrag"
+        android:name="com.example.fragmenttest.RightFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />-->
+
+    <!-- dynamisch laden fragment (via backend) -->
+    <FrameLayout
+        android:id="@+id/rightLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/purple_200">
+    </FrameLayout>
+</LinearLayout>
