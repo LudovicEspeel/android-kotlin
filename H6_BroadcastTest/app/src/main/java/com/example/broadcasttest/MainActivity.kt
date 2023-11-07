@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     inner class TimeChangeReceiver : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            Toast.makeText(context, "Time has changed", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Time has changed", Toast.LENGTH_LONG).show()
         }
     }
 }
