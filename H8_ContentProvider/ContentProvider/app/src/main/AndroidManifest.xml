@@ -12,7 +12,7 @@
         android:theme="@style/Theme.ContentProvider"
         tools:targetApi="31">
         <provider
-            android:name=".DatabaseProvider"
+            android:name=".DatabaseProvider2"
             android:authorities="com.example.contentprovider.provider"
             android:enabled="true"
             android:exported="true"></provider>
