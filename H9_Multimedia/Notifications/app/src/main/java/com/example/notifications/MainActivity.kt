@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         //manager.cancel(1)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) // Android 8.0+
         {
+            // (*)
             val channel = NotificationChannel("normal", "Normal", NotificationManager.IMPORTANCE_DEFAULT)
             manager.createNotificationChannel(channel)
         }
@@ -56,3 +57,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+/*
+ (*) prioriteit kan je instellen via IMPORTANCE_DEFAULT, IMPORTANCE_HIGH, IMPORTANCE_LOW, IMPORTANCE_MAX,
+     IMPORTANCE_MIN, IMPORTANCE_NONE, IMPORTANCE_UNSPECIFIED
+
+     Blijkbaar als je bv. IMPORTANCE_HIGH gebruikt, kan het id niet "normal" zijn of de prioriteit wordt dan
+     als IMPORTANCE_DEFAULT beschouwd?! Nochtans mag je het id vrij kiezen (numerieke waarde, tekstwaarde)?!
+ */
