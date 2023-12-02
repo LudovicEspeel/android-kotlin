@@ -38,7 +38,8 @@ class MyService : Service() {
                 R.drawable.vives_logo))
             .setContentIntent(pi)
             .build()
-        startForeground(1, notification)
+        manager.notify(1, notification)
+        //startForeground(1, notification)
         //
     }
 
