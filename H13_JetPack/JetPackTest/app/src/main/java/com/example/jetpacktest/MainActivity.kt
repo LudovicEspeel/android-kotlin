@@ -105,6 +105,9 @@ class MainActivity : AppCompatActivity() {
         viewModel4.userName.observe(this){ user ->
             binding.infoTextView.text=user
         }
+
+        //TODO: nice demo at the end, change the theme of the app in the manifest file from BasicViewModel to:
+        //android:theme="@style/Theme.JetpackTest"
     }
 
     override fun onPause() {

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.JetpackApplication" parent="Theme.Material3.DayNight.NoActionBar"></style>
-    <style name="Theme.JetpackApplication" parent="Base.Theme.JetpackApplication" />
+    <style name="Base.Theme.JetpackTest" parent="Theme.Material3.DayNight.NoActionBar"></style>
+    <style name="Theme.JetpackTest" parent="Base.Theme.JetpackTest" />
     <style name="Theme.BasicViewModel" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
