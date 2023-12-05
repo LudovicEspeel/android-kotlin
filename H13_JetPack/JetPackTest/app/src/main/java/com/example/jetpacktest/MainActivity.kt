@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
 //        refreshCounter1()
 
 
-
 //        // example 2: ViewModel with parameters
 //        // get the value of countReserved from SharedPreferences:
 //        sp = getPreferences(MODE_PRIVATE)
@@ -84,7 +83,6 @@ class MainActivity : AppCompatActivity() {
         sp = getPreferences(MODE_PRIVATE)
         val countReserved = sp.getInt("COUNTER", 0)
         viewModel4 = ViewModelProvider(this, MainViewModelFactory4(countReserved)).get(MainViewModel4::class.java)
-        lifecycle.addObserver(MyObserver())
 
         binding.plusOneButton.setOnClickListener {
             viewModel4.plusOne()
@@ -98,6 +96,7 @@ class MainActivity : AppCompatActivity() {
             viewModel4.getUser()
         }
 
+        // counter is here a getter:
         viewModel4.counter.observe(this) { count ->
             binding.infoTextView.text = count.toString()
         }

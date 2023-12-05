@@ -39,19 +39,19 @@ class MainViewModel3(countReserved: Int) : ViewModel() {
 class MainViewModel4(countReserved: Int) : ViewModel() {
 
     private val _counter = MutableLiveData<Int>()
-    private val userLiveData = MutableLiveData<User>()
+    private val _userLiveData = MutableLiveData<User>()
 
     val counter: LiveData<Int>
         get() = _counter
 
-    val userName: LiveData<String> = Transformations.map(userLiveData)
+    val userName: LiveData<String> = Transformations.map(_userLiveData)
     { user ->
         "${user.firstName} ${user.lastName}" // only expose the fields firstName and lastName
     }
 
     init {
         _counter.value = countReserved
-        userLiveData.value = User("John", "Doe", 18)
+        _userLiveData.value = User("John", "Doe", 18)
     }
 
     fun plusOne() {
@@ -64,6 +64,6 @@ class MainViewModel4(countReserved: Int) : ViewModel() {
     }
 
     fun getUser() {
-        userLiveData.value = User("Jane", "Doe", 19)
+        _userLiveData.value = User("Jane", "Doe", 19)
     }
 }
